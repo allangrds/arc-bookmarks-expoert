@@ -1,0 +1,5 @@
+{
+  "projectDir": "/absolute/path/to/arc-bookmarks-expoert",
+  "frequency": "daily",
+  "times": ["10:00", "15:00", "19:00"]
+}

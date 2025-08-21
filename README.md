@@ -9,6 +9,7 @@
 - [Installation & Usage](#installation--usage)
 - [How it Works](#how-it-works)
 - [Features](#features)
+- [Scheduled Automation](#scheduled-automation)
 - [Contributions](#contributions)
 - [Support](#support)
 - [License](#license)
@@ -58,6 +59,21 @@ Easily export your Arc browser bookmarks to a beautiful, collapsible HTML page a
   - Firefox (`.firefox.json`)
   - Edge (`.edge.json`)
   - Safari (`.safari.json`)
+
+## Scheduled Automation
+
+You can automate the export process using the provided `script.sh`. This script reads configuration from `script.json` and sets up scheduled tasks (using cron on Linux/macOS or Task Scheduler on Windows) to run the export automatically.
+
+### script.json options
+- `projectDir`: Absolute path to your project folder.
+- `frequency`: `daily`, `weekly`, or `monthly` (defines how often the export runs).
+- `times`: List of times in 24h format, e.g. `["10:00", "15:00", "19:00"]`.
+
+Just edit `script.json` to your needs and run:
+```sh
+bash script.sh
+```
+This will configure the scheduled task for your OS automatically.
 
 ## Contributions
 Contributions are welcome! Feel free to open issues or submit pull requests to improve features, fix bugs, or suggest enhancements.

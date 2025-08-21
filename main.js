@@ -156,7 +156,7 @@ function convertBookmarksToHtml(bookmarks) {
   <title>Bookmarks</title>
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #f6f7fb; color: #222; margin: 0; padding: 0; }
-    .container { max-width: 500px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px #0001; padding: 32px 24px; }
+  .container { max-width: 100vw; overflow-x: auto; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px #0001; padding: 32px 24px; }
     h1 { text-align: center; color: #3a3a3a; margin-bottom: 32px; }
   ul.bookmarks, .folder > ul { list-style: none; padding-left: 0; margin: 0; }
     .folder { margin: 6px 0 6px 0; }
@@ -168,19 +168,21 @@ function convertBookmarksToHtml(bookmarks) {
   .bookmark-link { display: block; color: #222; text-decoration: none; border-radius: 8px; margin: 2px 0; transition: background 0.2s, color 0.2s; font-weight: 500; }
   .bookmark-link:hover { background: #e6eaff; color: #2a4cff; }
   /* Indentação visual por nível */
-    ul.bookmarks > li > .folder-title, ul.bookmarks > li > a.bookmark-link {
-      padding-left: 8px;
-    }
-    ul.bookmarks > li > .folder-title {
-      font-size: 1.18em;
-    }
-    ul.bookmarks a.bookmark-link {
-      margin-bottom: 6px;
-    }
-    ul.bookmarks ul > li > .folder-title, ul.bookmarks ul > li > a.bookmark-link { padding-left: 32px; }
-    ul.bookmarks ul ul > li > .folder-title, ul.bookmarks ul ul > li > a.bookmark-link { padding-left: 56px; }
-    ul.bookmarks ul ul ul > li > .folder-title, ul.bookmarks ul ul ul > li > a.bookmark-link { padding-left: 80px; }
-    ul.bookmarks ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul > li > a.bookmark-link { padding-left: 104px; }
+  ul.bookmarks > li > .folder-title, ul.bookmarks > li > a.bookmark-link { padding-left: 8px; }
+  ul.bookmarks > li > .folder-title { font-size: 1.18em; }
+  ul.bookmarks a.bookmark-link { margin-bottom: 6px; }
+  ul.bookmarks ul > li > .folder-title, ul.bookmarks ul > li > a.bookmark-link { padding-left: 32px; }
+  ul.bookmarks ul ul > li > .folder-title, ul.bookmarks ul ul > li > a.bookmark-link { padding-left: 56px; }
+  ul.bookmarks ul ul ul > li > .folder-title, ul.bookmarks ul ul ul > li > a.bookmark-link { padding-left: 80px; }
+  ul.bookmarks ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul > li > a.bookmark-link { padding-left: 104px; }
+  ul.bookmarks ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul > li > a.bookmark-link { padding-left: 128px; }
+  ul.bookmarks ul ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul ul > li > a.bookmark-link { padding-left: 152px; }
+  ul.bookmarks ul ul ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul ul ul > li > a.bookmark-link { padding-left: 176px; }
+  ul.bookmarks ul ul ul ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul ul ul ul > li > a.bookmark-link { padding-left: 200px; }
+  ul.bookmarks ul ul ul ul ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul ul ul ul ul > li > a.bookmark-link { padding-left: 224px; }
+  ul.bookmarks ul ul ul ul ul ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul ul ul ul ul ul > li > a.bookmark-link { padding-left: 248px; }
+  ul.bookmarks ul ul ul ul ul ul ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul ul ul ul ul ul ul > li > a.bookmark-link { padding-left: 272px; }
+  ul.bookmarks ul ul ul ul ul ul ul ul ul ul ul ul > li > .folder-title, ul.bookmarks ul ul ul ul ul ul ul ul ul ul ul ul > li > a.bookmark-link { padding-left: 296px; }
   </style>
 </head>
 <body>
