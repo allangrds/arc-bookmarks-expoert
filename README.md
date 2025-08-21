@@ -1,5 +1,8 @@
 # Arc Bookmarks Export
 
+<img width="663" height="402" alt="Captura de Tela 2025-08-20 às 21 46 13" src="https://github.com/user-attachments/assets/15632bca-60c1-4b2b-ba41-58eca03b2d08" />
+
+
 ## Table of Contents
 - [Overview](#overview)
 - [Requirements](#requirements)
