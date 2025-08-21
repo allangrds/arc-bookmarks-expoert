@@ -1,0 +1,19 @@
+{
+  "name": "arc-bookmarks-expoert",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allangrds/arc-bookmarks-expoert.git"
+  },
+  "author": "allangrds",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allangrds/arc-bookmarks-expoert/issues"
+  },
+  "homepage": "https://github.com/allangrds/arc-bookmarks-expoert#readme"
+}
