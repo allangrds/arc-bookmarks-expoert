@@ -10,8 +10,8 @@
 - [How it Works](#how-it-works)
 - [Features](#features)
 - [Contributions](#contributions)
+- [Support](#support)
 - [License](#license)
-<!-- - [Support](#support) -->
 
 ## Overview
 Easily export your Arc browser bookmarks to a beautiful, collapsible HTML page and a structured JSON file. This tool helps you visualize and backup your Arc bookmarks with a modern interface and flexible output options.
@@ -62,10 +62,10 @@ Easily export your Arc browser bookmarks to a beautiful, collapsible HTML page a
 ## Contributions
 Contributions are welcome! Feel free to open issues or submit pull requests to improve features, fix bugs, or suggest enhancements.
 
-<!-- ## Support
+## Support
 If you find this project useful, consider supporting it:
 
-[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/allangrds) -->
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/allangrdse)
 
 ## License
 MIT License. See [LICENSE](LICENSE) for details.
