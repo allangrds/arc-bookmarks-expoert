@@ -271,6 +271,83 @@ function main() {
   const html = convertBookmarksToHtml(bookmarks);
   writeHtml(html, `${outputBase}.html`);
   writeJson(bookmarks, `${outputBase}.json`);
+
+  // Export for browsers
+  function flattenBookmarksForBrowser(items, browser) {
+    let arr = [];
+    items.forEach(item => {
+      if (item.type === "folder") {
+        if (browser === 'firefox') {
+          arr.push({
+            type: "folder",
+            title: item.title,
+            children: flattenBookmarksForBrowser(item.children, browser)
+          });
+        } else if (browser === 'chrome' || browser === 'edge') {
+          arr.push({
+            id: '',
+            parentId: '',
+            title: item.title,
+            dateAdded: '',
+            type: "folder",
+            children: flattenBookmarksForBrowser(item.children, browser)
+          });
+        } else if (browser === 'safari') {
+          arr.push({
+            Title: item.title,
+            Children: flattenBookmarksForBrowser(item.children, browser),
+            WebBookmarkType: "WebBookmarkTypeList"
+          });
+        }
+      } else if (item.type === "bookmark") {
+        if (browser === 'firefox') {
+          arr.push({ type: "bookmark", title: item.title, url: item.url });
+        } else if (browser === 'chrome' || browser === 'edge') {
+          arr.push({
+            id: '',
+            parentId: '',
+            title: item.title,
+            url: item.url,
+            dateAdded: '',
+            type: "url"
+          });
+        } else if (browser === 'safari') {
+          arr.push({
+            URIDictionary: { title: item.title },
+            URLString: item.url,
+            WebBookmarkType: "WebBookmarkTypeLeaf"
+          });
+        }
+      }
+    });
+    return arr;
+  }
+
+  // Firefox
+  const firefoxJson = { children: flattenBookmarksForBrowser(bookmarks.bookmarks, 'firefox') };
+  writeJson(firefoxJson, `${outputBase}.firefox.json`);
+
+  // Chrome
+  const chromeJson = {
+    roots: {
+      bookmark_bar: { children: flattenBookmarksForBrowser(bookmarks.bookmarks, 'chrome') },
+      other: { children: [] },
+      synced: { children: [] }
+    },
+    version: 1
+  };
+  writeJson(chromeJson, `${outputBase}.chrome.json`);
+
+  // Edge (mesmo formato do Chrome)
+  writeJson(chromeJson, `${outputBase}.edge.json`);
+
+  // Safari
+  const safariJson = {
+    Title: "Bookmarks",
+    Children: flattenBookmarksForBrowser(bookmarks.bookmarks, 'safari'),
+    WebBookmarkFileVersion: 1
+  };
+  writeJson(safariJson, `${outputBase}.safari.json`);
   log("INFO", "Done!");
 }
 

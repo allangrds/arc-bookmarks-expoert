@@ -8,6 +8,7 @@
 - [Requirements](#requirements)
 - [Installation & Usage](#installation--usage)
 - [How it Works](#how-it-works)
+- [Features](#features)
 - [Contributions](#contributions)
 - [License](#license)
 <!-- - [Support](#support) -->
@@ -47,6 +48,16 @@ Easily export your Arc browser bookmarks to a beautiful, collapsible HTML page a
 - Converts the data into a hierarchical structure
 - Generates both an HTML file (with collapsible folders and visual indentation) and a JSON file
 - Output files are saved in the current directory with the specified or default name
+
+## Features
+
+- Generates a modern, collapsible HTML page for easy navigation of your bookmarks
+- Exports a structured JSON file with the same hierarchy
+- **Also exports JSON files ready for import in:**
+  - Chrome (`.chrome.json`)
+  - Firefox (`.firefox.json`)
+  - Edge (`.edge.json`)
+  - Safari (`.safari.json`)
 
 ## Contributions
 Contributions are welcome! Feel free to open issues or submit pull requests to improve features, fix bugs, or suggest enhancements.
