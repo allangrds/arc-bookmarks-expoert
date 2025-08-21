@@ -140,3 +140,4 @@ vite.config.ts.timestamp-*
 
 *.json
 *.html
+.DS_Store

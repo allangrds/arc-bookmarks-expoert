@@ -185,7 +185,7 @@ function convertBookmarksToHtml(bookmarks) {
 </head>
 <body>
   <div class="container">
-    <h1>Favoritos</h1>
+    <h1>Bookmarks</h1>
     <ul class="bookmarks">
 `;
 
